@@ -1,0 +1,5 @@
+//alert("le fichier JS est exécuté!");
+console.log(document.getElementById("task-list-<%=@category.title.downcase%>"));
+
+//document.getElementById("task-list-<%=@category.title.downcase%>").insertAdjacentHTML("beforeend", "<li>nouvelle tache </li>");
+document.getElementById("task-list-<%=@category.title.downcase%>").insertAdjacentHTML("beforeend", "<%= j render 'task', task: @task %>")

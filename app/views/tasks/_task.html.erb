@@ -1,0 +1,7 @@
+<li id="<%=task.id%>">
+<%= task.title %>,
+to read:  <%=  task.deadline.strftime("%D")  %>
+
+<%= link_to "", task,class: "fa fa-trash-o" , method: "delete",  :remote => true %>
+
+</li>
