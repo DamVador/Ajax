@@ -12,6 +12,7 @@
         <% unless task.deadline.nil? %>
           , to read: <%= task.deadline.strftime('%D')  %>
         <% end %>
+        <%= check_box_tag :checking, true, false, data: { remote: true, url: task_path(task.id), params: {}.to_param, method: "put" }%>
 
         <%= link_to "", task, method: "delete", class: "fa fa-trash-o", :remote => true  %>
 
