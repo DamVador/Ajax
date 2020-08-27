@@ -1,6 +1,7 @@
 <%  if @email.read == false %>
-  document.getElementById("<%=@email.id%>").style.backgroundColor = "yellow";
+  document.getElementById("<%=@email.id%>").style.backgroundColor = "white";
   <%  @email.update(read: true)%>
 <% else %>
+document.getElementById("<%=@email.id%>").style.backgroundColor = "yellow";
 <%  @email.update(read: false)%>
 <% end %>

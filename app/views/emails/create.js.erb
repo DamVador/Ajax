@@ -1,2 +1,2 @@
-alert("le fichier JS est exécuté!");
 document.getElementById("email-list").insertAdjacentHTML("afterbegin", "<%= j render 'email', email: @email %>")
+document.getElementById("<%=@email.id%>").style.backgroundColor = "yellow";
