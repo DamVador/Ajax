@@ -21,6 +21,7 @@ end
 
 8.times do
   Email.create!(object: Faker::Lorem.sentence,
-    body: Faker::Lorem.paragraphs)
+    body: Faker::Lorem.paragraphs,
+  read: false)
 end
 puts "Emails generated"
