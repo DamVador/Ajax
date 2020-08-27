@@ -1,0 +1,6 @@
+
+while (document.getElementById("email-body").firstChild) {
+ document.getElementById("email-body").removeChild(document.getElementById("email-body").lastChild);
+}
+
+document.getElementById("email-body").insertAdjacentHTML("beforeend", "<%= j render 'show', email: @email %>")
