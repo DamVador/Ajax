@@ -3,7 +3,8 @@
   <div class="card-body">
     <p class="card-text"> <%=@email.body%> </p>
 
-    <button type="button" class="btn btn-danger">Supprimer</button>
+    <%= link_to "Supprimer", email, method: "delete", class: "btn btn-danger", :remote => true  %>
+
     <button type="button" class="btn btn-warning">Marquer comme non-lu</button>
 
   </div>
