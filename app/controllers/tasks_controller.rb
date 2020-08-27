@@ -35,6 +35,7 @@ before_action :authenticate_user!
     @task.update(task_params)
     respond_to do |format|
       format.html { redirect_to root_path }
+      format.js { }
       flash[:notice] = "Task edited"
     end
   end
